@@ -1,5 +1,4 @@
-import { Component, Input, ViewChild, OnInit  } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { Component, ViewChild, OnInit  } from '@angular/core';
 import { ChildOneComponent } from './child-one/child-one.component';
 import { ChildTwoComponent } from './child-two/child-two.component';
 
@@ -13,9 +12,10 @@ export class AppComponent implements OnInit {
   @ViewChild(ChildOneComponent) childOneComponent: ChildOneComponent;
   @ViewChild(ChildTwoComponent) childTwoComponent: ChildTwoComponent;
 
-   estValid : boolean = false;
+   estValid: boolean ;
 
    ngOnInit(): void {
+    this.estValid = false;
     this.childOneComponent.identifiant.statusChanges.subscribe(e => this.submitlClicked());
     this.childTwoComponent.adresse.statusChanges.subscribe(e => this.submitlClicked());
   }
