@@ -1,0 +1,16 @@
+<div>
+  <form [formGroup]="identifiant">
+      <label>
+          First Name:
+          <input type="text" formControlName="first">
+        </label><br><br>
+
+        <label>
+          Last Name:
+          <input type="text" formControlName="last">
+        </label><br><br>
+
+        <button type="submit" [disabled]="!identifiant.valid">Enregistrer</button><br><br>
+
+  </form>
+</div>

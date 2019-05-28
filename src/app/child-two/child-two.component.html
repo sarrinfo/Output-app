@@ -1,0 +1,20 @@
+<div>
+    <form [formGroup]="adresse">
+        <label>
+            Rue:
+            <input type="text" formControlName="rue">
+          </label><br><br>
+
+          <label>
+            Ville:
+            <input type="text" formControlName="ville">
+          </label><br><br>
+          <label>
+              Pays:
+              <input type="text" formControlName="pays">
+            </label><br><br>
+
+          <button type="submit" [disabled]="!adresse.valid">Enregistrer</button><br><br>
+
+    </form>
+  </div>
